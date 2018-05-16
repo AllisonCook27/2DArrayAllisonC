@@ -38,7 +38,31 @@ namespace _2DArrayAllisonC
             width = Convert.ToInt16(this.nudWidth.Value);
 
             //create the array
+            int[,] a2DArray = new int[width, lenght];
 
+            //loop through the elements in the width
+            for (int widthCounter = 0; widthCounter < width; widthCounter++)
+            {
+                //loop tyhrought the elements in the length
+                for (int lenghtCounter = 0; lenghtCounter < lenght; lenghtCounter++)
+                {
+                    //get a random number between 0 and 9
+                    aRandomNumber = randomNumberGenerator.Next(0, 9 + 1);
+
+                    //insert the number into the array at the current index
+                    a2DArray[widthCounter, lenghtCounter] = aRandomNumber;
+
+                    //add the random number to the array text
+                    line = line + " " + aRandomNumber;
+                }
+
+                //add the line break to show next width
+                line = line + "\r" + "\n";
+
+            }
+
+            //insert the line into the list box
+            this.lstArray.Items.Add(line);
         }
     }
 }
