@@ -24,6 +24,11 @@ namespace _2DArrayAllisonC
             InitializeComponent();
         }
 
+        private void CalculateAverage(ref int[,] a2DArray)
+        {
+
+        }
+
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             //local variables
@@ -62,7 +67,10 @@ namespace _2DArrayAllisonC
             }
 
             //insert the line into the list box
-            this.lstArray.Items.Add(line);
+            this.txtArray.Text = line;
+
+            //calling the calculate average function
+            CalculateAverage(ref a2DArray);
         }
     }
 }

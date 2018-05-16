@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstArray = new System.Windows.Forms.ListBox();
             this.lblLenght = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.nudWidth = new System.Windows.Forms.NumericUpDown();
             this.nudLenght = new System.Windows.Forms.NumericUpDown();
             this.lblWidth = new System.Windows.Forms.Label();
+            this.txtArray = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLenght)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstArray
-            // 
-            this.lstArray.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstArray.FormattingEnabled = true;
-            this.lstArray.ItemHeight = 21;
-            this.lstArray.Location = new System.Drawing.Point(82, 115);
-            this.lstArray.Name = "lstArray";
-            this.lstArray.Size = new System.Drawing.Size(166, 172);
-            this.lstArray.TabIndex = 0;
             // 
             // lblLenght
             // 
@@ -103,17 +93,27 @@
             this.lblWidth.TabIndex = 7;
             this.lblWidth.Text = "Width (vertical)";
             // 
+            // txtArray
+            // 
+            this.txtArray.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArray.Location = new System.Drawing.Point(72, 115);
+            this.txtArray.Multiline = true;
+            this.txtArray.Name = "txtArray";
+            this.txtArray.ReadOnly = true;
+            this.txtArray.Size = new System.Drawing.Size(196, 169);
+            this.txtArray.TabIndex = 8;
+            // 
             // frm2DArray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 296);
+            this.Controls.Add(this.txtArray);
             this.Controls.Add(this.lblWidth);
             this.Controls.Add(this.nudLenght);
             this.Controls.Add(this.nudWidth);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lblLenght);
-            this.Controls.Add(this.lstArray);
             this.Name = "frm2DArray";
             this.Text = "2D Arrays by Allison C";
             ((System.ComponentModel.ISupportInitialize)(this.nudWidth)).EndInit();
@@ -124,13 +124,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lstArray;
         private System.Windows.Forms.Label lblLenght;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.NumericUpDown nudWidth;
         private System.Windows.Forms.NumericUpDown nudLenght;
         private System.Windows.Forms.Label lblWidth;
+        private System.Windows.Forms.TextBox txtArray;
     }
 }
 
